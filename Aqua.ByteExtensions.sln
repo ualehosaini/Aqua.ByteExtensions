@@ -3,9 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E7EF7436-2A32-4B75-83D9-09F4614B5F39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{993B36FA-CCE0-4A90-A5F1-47B89D062674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "others", "others", "{CCED1AF4-B573-440F-A391-FD5603C3FDE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aqua.ByteExtensions", "Aqua.ByteExtensions\Aqua.ByteExtensions.csproj", "{0538981C-B6B1-4F38-9997-E557C0145B13}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0538981C-B6B1-4F38-9997-E557C0145B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0538981C-B6B1-4F38-9997-E557C0145B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0538981C-B6B1-4F38-9997-E557C0145B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0538981C-B6B1-4F38-9997-E557C0145B13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0538981C-B6B1-4F38-9997-E557C0145B13} = {E7EF7436-2A32-4B75-83D9-09F4614B5F39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DABC8C06-413F-41F1-9658-0CE5FCFC1D0A}
