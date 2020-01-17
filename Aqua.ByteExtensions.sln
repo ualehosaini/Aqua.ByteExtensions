@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "others", "others", "{CCED1A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aqua.ByteExtensions", "Aqua.ByteExtensions\Aqua.ByteExtensions.csproj", "{0538981C-B6B1-4F38-9997-E557C0145B13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aqua.ByteExtensions.Tests", "Aqua.ByteExtensions.Tests\Aqua.ByteExtensions.Tests.csproj", "{C856785D-7EBE-4F69-BBC3-6980E2856CBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +23,17 @@ Global
 		{0538981C-B6B1-4F38-9997-E557C0145B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0538981C-B6B1-4F38-9997-E557C0145B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0538981C-B6B1-4F38-9997-E557C0145B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C856785D-7EBE-4F69-BBC3-6980E2856CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C856785D-7EBE-4F69-BBC3-6980E2856CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C856785D-7EBE-4F69-BBC3-6980E2856CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C856785D-7EBE-4F69-BBC3-6980E2856CBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0538981C-B6B1-4F38-9997-E557C0145B13} = {E7EF7436-2A32-4B75-83D9-09F4614B5F39}
+		{C856785D-7EBE-4F69-BBC3-6980E2856CBD} = {993B36FA-CCE0-4A90-A5F1-47B89D062674}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DABC8C06-413F-41F1-9658-0CE5FCFC1D0A}
