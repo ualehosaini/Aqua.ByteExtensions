@@ -19,5 +19,21 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{new byte[] {1}, true},
                         new object[]{new byte[] {0}, false},
             };
+
+        [Theory]
+        [MemberData(nameof(ToBytesCharData))]
+        public void ToBytes_Char_Valid(byte[] expected, char input)
+        {
+            Assert.Equal(expected, input.ToBytes());
+        }
+
+        public static IEnumerable<object[]> ToBytesCharData =>
+            new List<object[]>
+            {
+                        new object[]{new byte[] {0, 0}, null},
+                        new object[]{new byte[] {65, 0}, 'A'},
+                        new object[]{new byte[] {48, 0}, '0'},
+            };
+
     }
 }
