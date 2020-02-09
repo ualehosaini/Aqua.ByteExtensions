@@ -68,5 +68,19 @@ namespace Aqua.ByteExtensions
             return result;
         }
 
+        /// <summary>
+        /// Returns reversed byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytesReversed(this char input)
+        {
+            byte[] result = BitConverter.GetBytes(input);
+
+            Array.Reverse(result);
+
+            return result;
+        }
+
     }
 }
