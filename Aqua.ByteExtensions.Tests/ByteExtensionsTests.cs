@@ -72,6 +72,21 @@ namespace Aqua.ByteExtensions.Tests
             };
 
         [Theory]
+        [MemberData(nameof(ToBytesIntData))]
+        public void ToBytes_Int_Valid(byte[] expected, int input)
+        {
+            Assert.Equal(expected, input.ToBytes());
+        }
+
+        public static IEnumerable<object[]> ToBytesIntData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 0, 0, 0, 128 }, int.MinValue},
+                        new object[]{ new byte[] { 255, 255, 255, 127 }, int.MaxValue},
+            };
+
+        [Theory]
         [MemberData(nameof(ToBytesBooleanReversedData))]
         public void ToBytes_BooleanReversed_Valid(byte[] expected, bool input)
         {
