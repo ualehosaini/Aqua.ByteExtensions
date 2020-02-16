@@ -82,5 +82,15 @@ namespace Aqua.ByteExtensions
             return result;
         }
 
+        /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this long input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
     }
 }
