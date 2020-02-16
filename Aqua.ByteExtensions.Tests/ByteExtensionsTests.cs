@@ -117,5 +117,19 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{new byte[] {0, 48}, '0'},
             };
 
+        [Theory]
+        [MemberData(nameof(ToBytesLongData))]
+        public void ToBytes_Long_Valid(byte[] expected, long input)
+        {
+            Assert.Equal(expected, input.ToBytes());
+        }
+
+        public static IEnumerable<object[]> ToBytesLongData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 128 }, long.MinValue},
+                        new object[]{ new byte[] { 255, 255, 255, 255, 255, 255, 255, 127 }, long.MaxValue},
+            };
     }
 }
