@@ -150,5 +150,21 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 239, 255, 255, 255,  255, 255, 255 }, -1.7976931348623157E+308},
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 1 }, 4.9406564584124654E-324},
             };
+
+        [Theory]
+        [MemberData(nameof(ToBytesFloatData))]
+        public void ToBytes_Float_Valid(byte[] expected, float input)
+        {
+            Assert.Equal(expected, input.ToBytes());
+        }
+
+        public static IEnumerable<object[]> ToBytesFloatData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 255, 255, 127, 255 }, float.MinValue},
+                        new object[]{ new byte[] { 255, 255, 127, 127 }, float.MaxValue},
+            };
+
     }
 }
