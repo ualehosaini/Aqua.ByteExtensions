@@ -166,5 +166,24 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 255, 127, 127 }, float.MaxValue},
             };
 
+        [Theory]
+        [MemberData(nameof(GetBytesAtData))]
+        public void GetBytesAt_Valid(byte[] expected, byte[] input, int at, int n)
+        {
+            Assert.Equal(expected, input.GetBytesAt(at, n));
+        }
+
+        public static IEnumerable<object[]> GetBytesAtData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { }, null , 3, 2},
+                        new object[]{ new byte[] { }, new byte[] { 255 }, 3, -1},
+                        new object[]{ new byte[] { }, new byte[] { 255 }, 3, 2},
+                        new object[]{ new byte[] { }, new byte[] { 255 }, -3, 2},
+                        new object[]{ new byte[] { 255, 127 }, new byte[] { 255, 255, 255, 127 },  2, 2},
+                        new object[]{ new byte[] { 128 }, new byte[] { 0, 0, 0, 128 }, 3, 2},
+                        new object[]{ new byte[] { 255, 127 }, new byte[] { 255, 255, 255, 127 },  2, 2},
+            };
+
     }
 }
