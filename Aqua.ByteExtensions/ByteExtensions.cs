@@ -55,6 +55,26 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this long input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+        /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this ushort input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+        /// <summary>
         /// Returns reversed byte array
         /// </summary>
         /// <param name="input"></param>
@@ -80,16 +100,6 @@ namespace Aqua.ByteExtensions
             Array.Reverse(result);
 
             return result;
-        }
-
-        /// <summary>
-        /// Returns byte array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static byte[] ToBytes(this long input)
-        {
-            return BitConverter.GetBytes(input);
         }
 
         /// <summary>
@@ -134,6 +144,8 @@ namespace Aqua.ByteExtensions
             return result;
 
         }
+
+
 
     }
 }
