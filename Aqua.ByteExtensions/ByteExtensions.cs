@@ -145,6 +145,17 @@ namespace Aqua.ByteExtensions
 
         }
 
+        /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this uint input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+
 
 
     }
