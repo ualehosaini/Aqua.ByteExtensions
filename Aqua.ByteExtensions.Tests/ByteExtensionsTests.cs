@@ -214,5 +214,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 0, 0, 0, 0 }, uint.MinValue},
                         new object[]{ new byte[] { 255, 255, 255, 255 }, uint.MaxValue},
             };
+
+        [Theory]
+        [MemberData(nameof(ToBytesUlongData))]
+        public void ToBytes_ULong_Valid(byte[] expected, ulong input)
+        {
+            Assert.Equal(expected, input.ToBytes());
+        }
+
+        public static IEnumerable<object[]> ToBytesUlongData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, ulong.MinValue},
+                        new object[]{ new byte[] { 255, 255, 255, 255, 255, 255, 255, 255 }, ulong.MaxValue},
+            };
     }
 }
