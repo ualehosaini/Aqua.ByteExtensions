@@ -229,5 +229,22 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, ulong.MinValue},
                         new object[]{ new byte[] { 255, 255, 255, 255, 255, 255, 255, 255 }, ulong.MaxValue},
             };
+
+        [Theory]
+        [MemberData(nameof(ToBytesShortReversedData))]
+        public void ToBytes_ShortReversed_Valid(byte[] expected, short input)
+        {
+            Assert.Equal(expected, input.ToBytesReversed());
+        }
+
+        public static IEnumerable<object[]> ToBytesShortReversedData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0}, 0},
+                        new object[]{ new byte[] { 0, 15 }, 15},
+                        new object[]{ new byte[] { 255, 241 }, -15},
+                        new object[]{ new byte[] { 128, 0 }, short.MinValue},
+                        new object[]{ new byte[] { 127, 255 }, short.MaxValue},
+            };
     }
 }
