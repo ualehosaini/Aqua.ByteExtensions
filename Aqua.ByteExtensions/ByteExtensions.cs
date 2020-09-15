@@ -193,5 +193,29 @@ namespace Aqua.ByteExtensions
             return result;
         }
 
+        /// <summary>
+        /// Append bytes at the end
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="newBytes"></param>
+        /// <returns></returns>
+        public static byte[] Append(this byte[] input, byte[] newBytes)
+        {
+            if (input == null && newBytes == null)
+                return new byte[] { };
+
+            if (input == null)
+                return newBytes;
+
+            if (newBytes == null)
+                return input;
+
+            var result = new byte[input.Length + newBytes.Length];
+            Array.Copy(input, result, input.Length);
+            Array.Copy(newBytes, 0, result, input.Length, newBytes.Length);
+
+            return result;
+        }
+
     }
 }

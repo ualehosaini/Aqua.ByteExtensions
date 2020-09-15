@@ -261,5 +261,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 128, 0, 0, 0 }, int.MinValue},
                         new object[]{ new byte[] { 127, 255, 255, 255 }, int.MaxValue},
             };
+
+        [Theory]
+        [MemberData(nameof(AppendData))]
+        public void Append_Valid(byte[] expected, byte[] input, byte[] newBytes)
+        {
+            Assert.Equal(expected, input.Append(newBytes));
+        }
+
+        public static IEnumerable<object[]> AppendData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 255 }, null , new byte[] { 255 }},
+                        new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 }},
+                        new object[]{ new byte[] { 255, 127, 127 }, new byte[] { 255, 127 },  new byte[] { 127 }},
+            };
     }
 }
