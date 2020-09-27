@@ -276,5 +276,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 }},
                         new object[]{ new byte[] { 255, 127, 127 }, new byte[] { 255, 127 },  new byte[] { 127 }},
             };
+
+        [Theory]
+        [MemberData(nameof(ToBytesLongReversedData))]
+        public void ToBytes_LongReversed_Valid(byte[] expected, long input)
+        {
+            Assert.Equal(expected, input.ToBytesReversed());
+        }
+
+        public static IEnumerable<object[]> ToBytesLongReversedData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 128, 0, 0, 0, 0, 0, 0, 0 }, long.MinValue},
+                        new object[]{ new byte[] { 127, 255, 255, 255, 255, 255, 255, 255 }, long.MaxValue},
+            };
     }
 }
