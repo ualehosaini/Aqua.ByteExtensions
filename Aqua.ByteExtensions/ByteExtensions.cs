@@ -75,6 +75,36 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this float input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+        /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this uint input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+        /// <summary>
+        /// Returns byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytes(this ulong input)
+        {
+            return BitConverter.GetBytes(input);
+        }
+
+        /// <summary>
         /// Returns reversed byte array
         /// </summary>
         /// <param name="input"></param>
@@ -117,55 +147,6 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns byte array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static byte[] ToBytes(this float input)
-        {
-            return BitConverter.GetBytes(input);
-        }
-
-        /// <summary>
-        /// Return Sub Bytes of a Byte Array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="at"></param>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        public static byte[] GetBytesAt(this byte[] input, int at, int n)
-        {
-            if (input == null || input.Length == 0 || n < 1 || at < 0 || at > input.Length)
-                return new byte[] { };
-
-            var resultLength = at + n > input.Length ? input.Length - at : n;
-            var result = new byte[resultLength];
-            Buffer.BlockCopy(input, at, result, 0, resultLength);
-            return result;
-
-        }
-
-        /// <summary>
-        /// Returns byte array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static byte[] ToBytes(this uint input)
-        {
-            return BitConverter.GetBytes(input);
-        }
-
-        /// <summary>
-        /// Returns byte array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static byte[] ToBytes(this ulong input)
-        {
-            return BitConverter.GetBytes(input);
-        }
-
-        /// <summary>
         /// Returns reversed byte array
         /// </summary>
         /// <param name="input"></param>
@@ -194,6 +175,39 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
+        /// Returns reversed byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytesReversed(this long input)
+        {
+            byte[] result = BitConverter.GetBytes(input);
+
+            Array.Reverse(result);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Return Sub Bytes of a Byte Array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="at"></param>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static byte[] GetBytesAt(this byte[] input, int at, int n)
+        {
+            if (input == null || input.Length == 0 || n < 1 || at < 0 || at > input.Length)
+                return new byte[] { };
+
+            var resultLength = at + n > input.Length ? input.Length - at : n;
+            var result = new byte[resultLength];
+            Buffer.BlockCopy(input, at, result, 0, resultLength);
+            return result;
+
+        }
+
+        /// <summary>
         /// Append bytes at the end
         /// </summary>
         /// <param name="input"></param>
@@ -217,19 +231,7 @@ namespace Aqua.ByteExtensions
             return result;
         }
 
-        /// <summary>
-        /// Returns reversed byte array
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public static byte[] ToBytesReversed(this long input)
-        {
-            byte[] result = BitConverter.GetBytes(input);
 
-            Array.Reverse(result);
-
-            return result;
-        }
 
 
     }
