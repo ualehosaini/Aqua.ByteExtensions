@@ -203,6 +203,20 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
+        /// Returns reversed byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytesReversed(this ushort input)
+        {
+            byte[] result = BitConverter.GetBytes(input);
+
+            Array.Reverse(result);
+
+            return result;
+        }
+
+        /// <summary>
         /// Return Sub Bytes of a Byte Array
         /// </summary>
         /// <param name="input"></param>
