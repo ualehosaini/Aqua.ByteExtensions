@@ -258,6 +258,19 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
+        /// Returns Little Endian byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] ToBytesLittleEndian(this int input)
+        {
+            byte[] result = BitConverter.GetBytes(input);
+            if (!BitConverter.IsLittleEndian)
+                Array.Reverse(result);
+            return result;
+        }
+
+        /// <summary>
         /// Return Sub Bytes of a Byte Array
         /// </summary>
         /// <param name="input"></param>

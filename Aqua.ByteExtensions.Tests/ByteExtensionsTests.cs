@@ -333,6 +333,21 @@ namespace Aqua.ByteExtensions.Tests
             };
 
         [Theory]
+        [MemberData(nameof(ToBytesLittleEndianData))]
+        public void ToBytesLittleEndian_Valid(byte[] expected, int input)
+        {
+            Assert.Equal(expected, input.ToBytesLittleEndian());
+        }
+
+        public static IEnumerable<object[]> ToBytesLittleEndianData =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
+                        new object[]{ new byte[] { 0, 0, 0, 128 }, int.MinValue},
+                        new object[]{ new byte[] { 255, 255, 255, 127 }, int.MaxValue},
+            };
+
+        [Theory]
         [MemberData(nameof(GetBytesAtData))]
         public void GetBytesAt_Valid(byte[] expected, byte[] input, int at, int n)
         {
