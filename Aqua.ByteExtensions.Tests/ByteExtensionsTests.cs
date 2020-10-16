@@ -398,5 +398,22 @@ namespace Aqua.ByteExtensions.Tests
             };
 
 
+        [Theory]
+        [MemberData(nameof(RemoveData))]
+        public void Remove_Valid(byte[] expected, byte[] input, int at, int n)
+        {
+            Assert.Equal(expected, input.Remove(at, n));
+        }
+
+        public static IEnumerable<object[]> RemoveData =>
+            new List<object[]>
+            {
+                        new object[]{ null, null , 1, 0},
+                        new object[]{ new byte[] { }, new byte[] { }, 1, 1},
+                        new object[]{ new byte[] { 255 }, new byte[] { 255, 255 }, 1, 1},
+                        new object[]{ new byte[] { 255, 127 }, new byte[] { 255, 127, 91 },  2, 1},
+                        new object[]{ new byte[] { 255, 127, 91, 91, 127 }, new byte[] { 255, 127, 91, 255, 127, 91, 127 },  3, 2},
+            };
+
     }
 }

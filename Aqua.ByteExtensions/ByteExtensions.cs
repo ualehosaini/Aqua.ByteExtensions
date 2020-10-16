@@ -347,6 +347,46 @@ namespace Aqua.ByteExtensions
             return bytes;
         }
 
+        /// <summary>
+        /// Remove bytes at a specific location
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="at"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static byte[] Remove(this byte[] input, int at, int n)
+        {
+            if (input == null)
+            {
+                return null;
+            }
+
+            if (input.Length == 0)
+            {
+                return new byte[] { };
+            }
+
+            if (at < 0 || at > input.Length || n < 1)
+            {
+                return input;
+            }
+
+            byte[] result;
+            if (at + n > input.Length)
+            {
+                var subLength = input.Length - at;
+                result = new byte[subLength];
+                Buffer.BlockCopy(input, 0, result, 0, subLength);
+            }
+            else
+            {
+                result = new byte[input.Length - n];
+                Buffer.BlockCopy(input, 0, result, 0, at);
+                Buffer.BlockCopy(input, at + n, result, at, input.Length - at - n);
+
+            }
+            return result;
+        }
 
 
     }
