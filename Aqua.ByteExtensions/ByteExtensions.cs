@@ -313,6 +313,39 @@ namespace Aqua.ByteExtensions
             return result;
         }
 
+        /// <summary>
+        /// Insert bytes at a specified location
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="newBytes"></param>
+        /// <param name="at"></param>
+        /// <returns></returns>
+        public static byte[] Insert(this byte[] input, byte[] newBytes, int at)
+        {
+            if (input == null && newBytes == null)
+            {
+                return null;
+            }
+
+            if ((input == null || input.Length == 0) && newBytes != null)
+            {
+                return newBytes;
+            }
+
+            if ((input.Length == 0) && (newBytes == null || newBytes.Length == 0))
+            {
+                return input;
+            }
+
+            int tempAt = at > input.Length ? input.Length : at;
+
+            byte[] bytes = new byte[input.Length + newBytes.Length];
+            Buffer.BlockCopy(input, 0, bytes, 0, tempAt);
+            Buffer.BlockCopy(newBytes, 0, bytes, tempAt, newBytes.Length);
+            Buffer.BlockCopy(input, tempAt, bytes, tempAt + newBytes.Length, input.Length - tempAt);
+
+            return bytes;
+        }
 
 
 
