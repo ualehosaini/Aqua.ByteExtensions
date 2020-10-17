@@ -430,5 +430,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ "01-02-04-08-10-20", new byte[] { 1, 2, 4, 8, 16, 32 } }
             };
 
+        [Theory]
+        [MemberData(nameof(ToHexStringDashFreeData))]
+        public void ToHexStringDashFree_Valid(string expected, byte[] input)
+        {
+            Assert.Equal(expected, input.ToHexStringDashFree());
+        }
+
+        public static IEnumerable<object[]> ToHexStringDashFreeData =>
+            new List<object[]>
+            {
+                        new object[]{ "", null},
+                        new object[]{ "", new byte[] { }},
+                        new object[]{ "010204081020", new byte[] { 1, 2, 4, 8, 16, 32 } }
+            };
+
     }
 }
