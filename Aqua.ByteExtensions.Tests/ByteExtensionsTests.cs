@@ -415,5 +415,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 127, 91, 91, 127 }, new byte[] { 255, 127, 91, 255, 127, 91, 127 },  3, 2},
             };
 
+        [Theory]
+        [MemberData(nameof(ToHexStringData))]
+        public void ToHexString_Valid(string expected, byte[] input)
+        {
+            Assert.Equal(expected, input.ToHexString());
+        }
+
+        public static IEnumerable<object[]> ToHexStringData =>
+            new List<object[]>
+            {
+                        new object[]{ "", null},
+                        new object[]{ "", new byte[] { }},
+                        new object[]{ "01-02-04-08-10-20", new byte[] { 1, 2, 4, 8, 16, 32 } }
+            };
+
     }
 }
