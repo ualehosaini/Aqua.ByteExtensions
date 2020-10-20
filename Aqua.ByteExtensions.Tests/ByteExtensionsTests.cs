@@ -445,5 +445,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ "010204081020", new byte[] { 1, 2, 4, 8, 16, 32 } }
             };
 
+        [Theory]
+        [MemberData(nameof(ToHexStringBase64Data))]
+        public void ToHexStringBase64_Valid(string expected, byte[] input)
+        {
+            Assert.Equal(expected, input.ToHexStringBase64());
+        }
+
+        public static IEnumerable<object[]> ToHexStringBase64Data =>
+            new List<object[]>
+            {
+                        new object[]{ "", null},
+                        new object[]{ "", new byte[] { }},
+                        new object[]{ "AQIECBAg", new byte[] { 1, 2, 4, 8, 16, 32 } }
+            };
+
     }
 }

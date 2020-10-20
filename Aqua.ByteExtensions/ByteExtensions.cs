@@ -399,9 +399,6 @@ namespace Aqua.ByteExtensions
                 return string.Empty;
 
             return BitConverter.ToString(input);
-
-            // Input: { 1, 2, 4, 8, 16, 32 };
-            // Result: 01-02-04-08-10-20
         }
 
         /// <summary>
@@ -415,11 +412,20 @@ namespace Aqua.ByteExtensions
                 return string.Empty;
 
             return BitConverter.ToString(input).Replace("-", string.Empty);
-
-            // Input: { 1, 2, 4, 8, 16, 32 };
-            // Result: 010204081020
         }
 
+        /// <summary>
+        /// Returns a Base64 String of Byte array
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ToHexStringBase64(this byte[] input)
+        {
+            if (input == null || input.Length == 0)
+                return string.Empty;
+
+            return Convert.ToBase64String(input);
+        }
 
     }
 }
