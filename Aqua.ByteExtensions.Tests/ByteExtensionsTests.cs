@@ -475,7 +475,20 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ false, "Z1-02-04-08-10-20" }
             };
 
+        [Theory]
+        [MemberData(nameof(IsHexStringCStyleData))]
+        public void IsHexStringCStyle_Valid(bool expected, string input)
+        {
+            Assert.Equal(expected, input.IsHexStringCStyle());
+        }
 
+        public static IEnumerable<object[]> IsHexStringCStyleData =>
+            new List<object[]>
+            {
+                        new object[]{ false, null},
+                        new object[]{ true, "0x64"},
+                        new object[]{ false, "0y64" }
+            };
 
     }
 }

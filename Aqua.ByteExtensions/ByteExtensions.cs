@@ -467,5 +467,18 @@ namespace Aqua.ByteExtensions
 
             return System.Text.RegularExpressions.Regex.IsMatch(input, @"\A\b[0-9a-fA-F]+\b\Z");
         }
+
+        /// <summary>
+        /// Validate if a string is a C-Style Hex String
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsHexStringCStyle(this string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return false;
+
+            return System.Text.RegularExpressions.Regex.IsMatch(input, @"\A\b(0[xX])?[0-9a-fA-F]+\b\Z");
+        }
     }
 }
