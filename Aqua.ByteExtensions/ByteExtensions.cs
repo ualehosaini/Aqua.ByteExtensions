@@ -427,5 +427,32 @@ namespace Aqua.ByteExtensions
             return Convert.ToBase64String(input);
         }
 
+        /// <summary>
+        /// Validate a string if it is Base64
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsBase64(this string input)
+        {
+            if (string.IsNullOrEmpty(input)
+               || input.Length % 4 != 0
+               || input.Contains(" ")
+               || input.Contains("\t")
+               || input.Contains("\r")
+               || input.Contains("\n"))
+                return false;
+
+            try
+            {
+                Convert.FromBase64String(input);
+                return true;
+            }
+            catch
+            {
+                // Handle the exception
+            }
+
+            return false;
+        }
     }
 }
