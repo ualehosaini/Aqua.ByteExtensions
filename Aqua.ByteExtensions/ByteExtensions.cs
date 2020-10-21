@@ -454,5 +454,18 @@ namespace Aqua.ByteExtensions
 
             return false;
         }
+
+        /// <summary>
+        /// Validate if a string is Hex String
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsHexString(this string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return false;
+
+            return System.Text.RegularExpressions.Regex.IsMatch(input, @"\A\b[0-9a-fA-F]+\b\Z");
+        }
     }
 }

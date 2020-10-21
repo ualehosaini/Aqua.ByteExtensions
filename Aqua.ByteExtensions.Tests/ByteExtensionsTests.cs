@@ -460,6 +460,22 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ "AQIECBAg", new byte[] { 1, 2, 4, 8, 16, 32 } }
             };
 
+        [Theory]
+        [MemberData(nameof(IsHexStringData))]
+        public void IsHexString_Valid(bool expected, string input)
+        {
+            Assert.Equal(expected, input.IsHexString());
+        }
+
+        public static IEnumerable<object[]> IsHexStringData =>
+            new List<object[]>
+            {
+                        new object[]{ false, null},
+                        new object[]{ true, "010204081020"},
+                        new object[]{ false, "Z1-02-04-08-10-20" }
+            };
+
+
 
     }
 }
