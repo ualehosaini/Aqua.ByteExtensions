@@ -490,5 +490,19 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ false, "0y64" }
             };
 
+        [Theory]
+        [MemberData(nameof(GetBytes_Base64Data))]
+        public void GetBytes_Base64_Valid(byte[] expected, string input)
+        {
+            Assert.Equal(expected, input.GetBytes());
+        }
+
+        public static IEnumerable<object[]> GetBytes_Base64Data =>
+            new List<object[]>
+            {
+                        new object[]{ new byte[] { }, null},
+                        new object[]{ new byte[] { 1, 2, 4, 8, 16, 32 }, "AQIECBAg"},
+            };
+
     }
 }

@@ -480,5 +480,18 @@ namespace Aqua.ByteExtensions
 
             return System.Text.RegularExpressions.Regex.IsMatch(input, @"\A\b(0[xX])?[0-9a-fA-F]+\b\Z");
         }
+
+        /// <summary>
+        /// Get Byte Array from a Hex String
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static byte[] GetBytes(this string input)
+        {
+            return input.IsBase64() ? Convert.FromBase64String(input) : (new byte[] { });
+
+            // Input: AQIECBAg
+            // Result: { 1, 2, 4, 8, 16, 32 };
+        }
     }
 }
