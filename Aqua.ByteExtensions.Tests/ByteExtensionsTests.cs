@@ -590,6 +590,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.GetBytes());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> GetBytes_Base64Data =>
             new List<object[]>
             {
