@@ -442,6 +442,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.Append(newBytes));
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> AppendData =>
             new List<object[]>
             {
