@@ -572,6 +572,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.IsHexStringCStyle());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> IsHexStringCStyleData =>
             new List<object[]>
             {
