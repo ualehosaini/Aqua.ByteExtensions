@@ -554,6 +554,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.IsHexString());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> IsHexStringData =>
             new List<object[]>
             {
