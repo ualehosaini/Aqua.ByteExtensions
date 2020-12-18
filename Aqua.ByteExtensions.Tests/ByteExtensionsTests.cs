@@ -348,6 +348,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToBytesReversed());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToBytesUintReversedData =>
             new List<object[]>
             {
