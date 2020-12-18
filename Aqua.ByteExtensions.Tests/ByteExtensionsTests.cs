@@ -384,6 +384,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToBytesBigEndian());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToBytesBigEndianData =>
             new List<object[]>
             {
