@@ -12,6 +12,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToBytes());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToBytesBooleanData =>
             new List<object[]>
             {
