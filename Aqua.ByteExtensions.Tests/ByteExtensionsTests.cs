@@ -518,6 +518,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToHexStringDashFree());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToHexStringDashFreeData =>
             new List<object[]>
             {
