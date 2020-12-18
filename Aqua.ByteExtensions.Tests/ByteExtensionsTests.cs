@@ -536,6 +536,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToHexStringBase64());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToHexStringBase64Data =>
             new List<object[]>
             {
