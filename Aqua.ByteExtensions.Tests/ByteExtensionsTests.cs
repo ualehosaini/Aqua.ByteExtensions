@@ -500,6 +500,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.ToHexString());
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToHexStringData =>
             new List<object[]>
             {
