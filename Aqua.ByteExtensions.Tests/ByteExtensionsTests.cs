@@ -480,6 +480,9 @@ namespace Aqua.ByteExtensions.Tests
             Assert.Equal(expected, input.Remove(at, n));
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> RemoveData =>
             new List<object[]>
             {
