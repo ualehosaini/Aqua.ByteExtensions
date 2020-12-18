@@ -236,6 +236,9 @@ namespace Aqua.ByteExtensions.Tests
 
         }
 
+        /// <summary>
+        /// Data
+        /// </summary>
         public static IEnumerable<object[]> ToBytesDoubleReversedData =>
             new List<object[]>
             {
