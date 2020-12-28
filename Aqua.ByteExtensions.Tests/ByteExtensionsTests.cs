@@ -537,7 +537,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToHexStringBase64_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringBase64Data =>
             new List<object[]>
