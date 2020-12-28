@@ -461,7 +461,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test Insert_Valid
         /// </summary>
         public static IEnumerable<object[]> InsertData =>
             new List<object[]>
