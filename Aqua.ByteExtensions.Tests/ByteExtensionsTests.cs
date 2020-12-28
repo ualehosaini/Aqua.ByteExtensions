@@ -50,7 +50,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for tests
+        /// Sample data for tests ToBytes_Double_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesDoubleData =>
             new List<object[]>
