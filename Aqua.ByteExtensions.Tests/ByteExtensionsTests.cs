@@ -71,7 +71,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_Short_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesShortData =>
             new List<object[]>
