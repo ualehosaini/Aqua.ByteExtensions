@@ -573,7 +573,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test IsHexStringCStyle_Valid
+        /// Sample data for test - IsHexStringCStyle_Valid
         /// </summary>
         public static IEnumerable<object[]> IsHexStringCStyleData =>
             new List<object[]>
@@ -591,7 +591,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test GetBytes_Base64_Valid
+        /// Sample data for test - GetBytes_Base64_Valid
         /// </summary> 
         public static IEnumerable<object[]> GetBytes_Base64Data =>
             new List<object[]>
