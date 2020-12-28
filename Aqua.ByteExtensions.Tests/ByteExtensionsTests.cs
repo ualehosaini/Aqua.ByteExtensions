@@ -199,7 +199,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_BooleanReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesBooleanReversedData =>
             new List<object[]>
