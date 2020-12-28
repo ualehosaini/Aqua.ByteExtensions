@@ -13,7 +13,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Boolean_Valid
+        /// Sample data for test - ToBytes_Boolean_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesBooleanData =>
             new List<object[]>
@@ -31,7 +31,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Char_Valid
+        /// Sample data for test - ToBytes_Char_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesCharData =>
             new List<object[]>
