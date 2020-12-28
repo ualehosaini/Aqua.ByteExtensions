@@ -313,7 +313,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_FloatReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesFloatReversedData =>
             new List<object[]>
