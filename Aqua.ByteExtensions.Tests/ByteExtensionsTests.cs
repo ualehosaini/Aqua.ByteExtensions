@@ -91,7 +91,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_Int_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesIntData =>
             new List<object[]>
