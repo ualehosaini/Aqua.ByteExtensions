@@ -519,7 +519,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToHexStringDashFree_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringDashFreeData =>
             new List<object[]>
