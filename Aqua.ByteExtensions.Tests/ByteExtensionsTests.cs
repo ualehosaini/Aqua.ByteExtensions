@@ -501,7 +501,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToHexString_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringData =>
             new List<object[]>
