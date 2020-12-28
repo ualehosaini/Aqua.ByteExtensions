@@ -127,7 +127,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_Float_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesFloatData =>
             new List<object[]>
