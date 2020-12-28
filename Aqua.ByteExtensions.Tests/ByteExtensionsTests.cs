@@ -31,7 +31,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_Char_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesCharData =>
             new List<object[]>
