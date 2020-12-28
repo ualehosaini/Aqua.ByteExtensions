@@ -443,7 +443,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test Append_Valid
         /// </summary>
         public static IEnumerable<object[]> AppendData =>
             new List<object[]>
