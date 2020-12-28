@@ -385,7 +385,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytesBigEndian_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesBigEndianData =>
             new List<object[]>
