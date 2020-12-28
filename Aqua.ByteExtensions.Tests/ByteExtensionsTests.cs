@@ -421,7 +421,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test GetBytesAt_Valid
         /// </summary>
         public static IEnumerable<object[]> GetBytesAtData =>
             new List<object[]>
