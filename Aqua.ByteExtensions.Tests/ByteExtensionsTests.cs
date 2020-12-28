@@ -555,7 +555,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test IsHexString_Valid
         /// </summary>
         public static IEnumerable<object[]> IsHexStringData =>
             new List<object[]>
