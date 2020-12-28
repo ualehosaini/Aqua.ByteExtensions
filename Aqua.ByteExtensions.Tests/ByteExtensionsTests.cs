@@ -573,7 +573,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test IsHexStringCStyle_Valid
         /// </summary>
         public static IEnumerable<object[]> IsHexStringCStyleData =>
             new List<object[]>
