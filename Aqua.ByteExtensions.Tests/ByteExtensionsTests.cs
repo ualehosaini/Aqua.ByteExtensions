@@ -481,7 +481,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test Remove_Valid
         /// </summary>
         public static IEnumerable<object[]> RemoveData =>
             new List<object[]>
