@@ -349,7 +349,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_UIntReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUintReversedData =>
             new List<object[]>
