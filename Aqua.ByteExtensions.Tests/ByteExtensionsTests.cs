@@ -295,7 +295,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_ShortReversed_Valid
+        /// Sample data for test ToBytes_LongReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesLongReversedData =>
             new List<object[]>
