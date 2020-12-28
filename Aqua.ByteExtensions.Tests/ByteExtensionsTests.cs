@@ -50,7 +50,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for tests ToBytes_Double_Valid
+        /// Sample data for tests - ToBytes_Double_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesDoubleData =>
             new List<object[]>
@@ -71,7 +71,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Short_Valid
+        /// Sample data for test - ToBytes_Short_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesShortData =>
             new List<object[]>
@@ -91,7 +91,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Int_Valid
+        /// Sample data for test - ToBytes_Int_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesIntData =>
             new List<object[]>
@@ -109,7 +109,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Long_Valid
+        /// Sample data for test - ToBytes_Long_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesLongData =>
             new List<object[]>
@@ -127,7 +127,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_Float_Valid
+        /// Sample data for test - ToBytes_Float_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesFloatData =>
             new List<object[]>
@@ -145,7 +145,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_UShort_Valid
+        /// Sample data for test - ToBytes_UShort_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUshortData =>
             new List<object[]>
@@ -163,7 +163,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_UInt_Valid
+        /// Sample data for test - ToBytes_UInt_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUintData =>
             new List<object[]>
@@ -181,7 +181,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_ULong_Valid
+        /// Sample data for test - ToBytes_ULong_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUlongData =>
             new List<object[]>
@@ -199,7 +199,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_BooleanReversed_Valid
+        /// Sample data for test - ToBytes_BooleanReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesBooleanReversedData =>
             new List<object[]>
@@ -218,7 +218,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_CharReversed_Valid
+        /// Sample data for test - ToBytes_CharReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesCharReversedData =>
             new List<object[]>
@@ -237,7 +237,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_DoubleReversed_Valid
+        /// Sample data for test - ToBytes_DoubleReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesDoubleReversedData =>
             new List<object[]>
@@ -257,7 +257,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_ShortReversed_Valid
+        /// Sample data for test - ToBytes_ShortReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesShortReversedData =>
             new List<object[]>
@@ -277,7 +277,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_ShortReversed_Valid
+        /// Sample data for test - ToBytes_ShortReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesIntReversedData =>
             new List<object[]>
@@ -295,7 +295,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_LongReversed_Valid
+        /// Sample data for test - ToBytes_LongReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesLongReversedData =>
             new List<object[]>
@@ -313,7 +313,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_FloatReversed_Valid
+        /// Sample data for test - ToBytes_FloatReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesFloatReversedData =>
             new List<object[]>
@@ -331,7 +331,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_UShortReversed_Valid
+        /// Sample data for test - ToBytes_UShortReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUshortReversedData =>
             new List<object[]>
@@ -349,7 +349,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_UIntReversed_Valid
+        /// Sample data for test - ToBytes_UIntReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUintReversedData =>
             new List<object[]>
@@ -367,7 +367,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytes_ULongReversed_Valid
+        /// Sample data for test - ToBytes_ULongReversed_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesUlongReversedData =>
             new List<object[]>
@@ -385,7 +385,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytesBigEndian_Valid
+        /// Sample data for test - ToBytesBigEndian_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesBigEndianData =>
             new List<object[]>
@@ -403,7 +403,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToBytesLittleEndian_Valid
+        /// Sample data for test - ToBytesLittleEndian_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesLittleEndianData =>
             new List<object[]>
@@ -421,7 +421,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test GetBytesAt_Valid
+        /// Sample data for test - GetBytesAt_Valid
         /// </summary>
         public static IEnumerable<object[]> GetBytesAtData =>
             new List<object[]>
@@ -443,7 +443,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test Append_Valid
+        /// Sample data for test - Append_Valid
         /// </summary>
         public static IEnumerable<object[]> AppendData =>
             new List<object[]>
@@ -461,7 +461,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test Insert_Valid
+        /// Sample data for test - Insert_Valid
         /// </summary>
         public static IEnumerable<object[]> InsertData =>
             new List<object[]>
@@ -481,7 +481,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test Remove_Valid
+        /// Sample data for test - Remove_Valid
         /// </summary>
         public static IEnumerable<object[]> RemoveData =>
             new List<object[]>
@@ -501,7 +501,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToHexString_Valid
+        /// Sample data for test - ToHexString_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringData =>
             new List<object[]>
@@ -519,7 +519,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToHexStringDashFree_Valid
+        /// Sample data for test - ToHexStringDashFree_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringDashFreeData =>
             new List<object[]>
@@ -537,7 +537,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test ToHexStringBase64_Valid
+        /// Sample data for test - ToHexStringBase64_Valid
         /// </summary>
         public static IEnumerable<object[]> ToHexStringBase64Data =>
             new List<object[]>
@@ -555,7 +555,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test IsHexString_Valid
+        /// Sample data for test - IsHexString_Valid
         /// </summary>
         public static IEnumerable<object[]> IsHexStringData =>
             new List<object[]>
