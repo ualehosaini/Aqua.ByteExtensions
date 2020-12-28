@@ -109,7 +109,7 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         /// <summary>
-        /// Sample data for test
+        /// Sample data for test ToBytes_Long_Valid
         /// </summary>
         public static IEnumerable<object[]> ToBytesLongData =>
             new List<object[]>
