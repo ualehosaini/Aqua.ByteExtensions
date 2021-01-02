@@ -245,7 +245,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns Big Endian byte array
+        /// Returns Big Endian byte array from int
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
