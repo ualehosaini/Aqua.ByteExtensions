@@ -231,7 +231,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns reversed byte array
+        /// Returns reversed byte array from ulong
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
