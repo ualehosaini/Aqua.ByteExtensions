@@ -258,7 +258,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns Little Endian byte array
+        /// Returns Little Endian byte array from int
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
