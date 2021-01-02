@@ -65,7 +65,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns byte array
+        /// Returns byte array from ushort
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
