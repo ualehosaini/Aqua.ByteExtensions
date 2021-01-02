@@ -105,7 +105,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns reversed byte array
+        /// Returns reversed byte array from bool
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
