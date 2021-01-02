@@ -189,7 +189,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns reversed byte array
+        /// Returns reversed byte array from float
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
