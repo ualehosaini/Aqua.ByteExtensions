@@ -5,7 +5,7 @@ namespace Aqua.ByteExtensions
     public static class ByteExtensions
     {
         /// <summary>
-        /// Returns byte array
+        /// Returns byte array - bool
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
