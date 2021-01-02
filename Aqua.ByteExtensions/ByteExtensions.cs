@@ -75,7 +75,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns byte array
+        /// Returns byte array from float
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
