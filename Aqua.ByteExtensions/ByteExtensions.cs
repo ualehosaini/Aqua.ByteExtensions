@@ -85,7 +85,7 @@ namespace Aqua.ByteExtensions
         }
 
         /// <summary>
-        /// Returns byte array
+        /// Returns byte array from uint
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
