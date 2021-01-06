@@ -31,9 +31,7 @@ namespace Aqua.ByteExtensions
         /// <param name="input"></param>
         /// <returns></returns>
         public static byte[] ToBytes(this short input)
-        {
-            return BitConverter.GetBytes(input);
-        }
+        => BitConverter.GetBytes(input);
 
         /// <summary>
         /// Returns byte array from int
