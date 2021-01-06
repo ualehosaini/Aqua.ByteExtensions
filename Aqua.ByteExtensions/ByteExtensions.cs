@@ -456,12 +456,6 @@ namespace Aqua.ByteExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static byte[] GetBytes(this string input)
-        {
-            return input.IsBase64() ? Convert.FromBase64String(input) : (new byte[] { });
-
-            // Input: AQIECBAg
-            // Result: { 1, 2, 4, 8, 16, 32 };
-        }
+        public static byte[] GetBytes(this string input) => input.IsBase64() ? Convert.FromBase64String(input) : (new byte[] { });// Input: AQIECBAg// Result: { 1, 2, 4, 8, 16, 32 };
     }
 }
