@@ -72,10 +72,7 @@ namespace Aqua.ByteExtensions
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static byte[] ToBytes(this ulong input)
-        {
-            return BitConverter.GetBytes(input);
-        }
+        public static byte[] ToBytes(this ulong input) => BitConverter.GetBytes(input);
 
         /// <summary>
         /// Returns reversed byte array from bool
