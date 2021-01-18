@@ -88,10 +88,7 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(ToBytesLongData))]
-        public void ToBytes_Long_Valid(byte[] expected, long input)
-        {
-            Assert.Equal(expected, input.ToBytes());
-        }
+        public void ToBytes_Long_Valid(byte[] expected, long input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_Long_Valid
