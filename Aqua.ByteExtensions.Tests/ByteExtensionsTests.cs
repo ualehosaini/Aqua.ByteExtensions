@@ -24,10 +24,7 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(ToBytesCharData))]
-        public void ToBytes_Char_Valid(byte[] expected, char input)
-        {
-            Assert.Equal(expected, input.ToBytes());
-        }
+        public void ToBytes_Char_Valid(byte[] expected, char input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_Char_Valid
