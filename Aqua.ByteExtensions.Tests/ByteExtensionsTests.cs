@@ -6,7 +6,7 @@ namespace Aqua.ByteExtensions.Tests
     public class ByteExtensionsTests
     {
         [Theory]
-        [MemberData(nameof(ToBytesBooleanData))]
+        [MemberData(nameof(GetToBytesBooleanData()))]
         public void ToBytes_Boolean_Valid(byte[] expected, bool input)
         {
             Assert.Equal(expected, input.ToBytes());
@@ -15,13 +15,15 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_Boolean_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesBooleanData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesBooleanData()
+        {
+            return new List<object[]>
             {
                         new object[]{new byte[] {0}, null},
                         new object[]{new byte[] {1}, true},
                         new object[]{new byte[] {0}, false},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesCharData))]
