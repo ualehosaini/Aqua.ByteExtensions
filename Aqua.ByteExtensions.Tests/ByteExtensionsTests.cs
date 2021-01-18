@@ -194,11 +194,7 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(ToBytesDoubleReversedData))]
-        public void ToBytes_DoubleReversed_Valid(byte[] expected, double input)
-        {
-            Assert.Equal(expected, input.ToBytesReversed());
-
-        }
+        public void ToBytes_DoubleReversed_Valid(byte[] expected, double input) => Assert.Equal(expected, input.ToBytesReversed());
 
         /// <summary>
         /// Sample data for test - ToBytes_DoubleReversed_Valid
