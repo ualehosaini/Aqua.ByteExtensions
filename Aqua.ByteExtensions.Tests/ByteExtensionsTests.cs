@@ -382,10 +382,7 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(InsertData))]
-        public void Insert_Valid(byte[] expected, byte[] input, byte[] newBytes, int at)
-        {
-            Assert.Equal(expected, input.Insert(newBytes, at));
-        }
+        public void Insert_Valid(byte[] expected, byte[] input, byte[] newBytes, int at) => Assert.Equal(expected, input.Insert(newBytes, at));
 
         /// <summary>
         /// Sample data for test - Insert_Valid
