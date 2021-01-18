@@ -348,10 +348,7 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetBytesAtData))]
-        public void GetBytesAt_Valid(byte[] expected, byte[] input, int at, int n)
-        {
-            Assert.Equal(expected, input.GetBytesAt(at, n));
-        }
+        public void GetBytesAt_Valid(byte[] expected, byte[] input, int at, int n) => Assert.Equal(expected, input.GetBytesAt(at, n));
 
         /// <summary>
         /// Sample data for test - GetBytesAt_Valid
