@@ -252,19 +252,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesIntReversedData))]
+        [MemberData(nameof(GetToBytesIntReversedData()))]
         public void ToBytes_IntReversed_Valid(byte[] expected, int input) => Assert.Equal(expected, input.ToBytesReversed());
 
         /// <summary>
         /// Sample data for test - ToBytes_ShortReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesIntReversedData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesIntReversedData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 128, 0, 0, 0 }, int.MinValue},
                         new object[]{ new byte[] { 127, 255, 255, 255 }, int.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesLongReversedData))]
