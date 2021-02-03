@@ -409,19 +409,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(AppendData))]
+        [MemberData(nameof(GetAppendData()))]
         public void Append_Valid(byte[] expected, byte[] input, byte[] newBytes) => Assert.Equal(expected, input.Append(newBytes));
 
         /// <summary>
         /// Sample data for test - Append_Valid
         /// </summary>
-        public static IEnumerable<object[]> AppendData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetAppendData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 255 }, null , new byte[] { 255 }},
                         new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 }},
                         new object[]{ new byte[] { 255, 127, 127 }, new byte[] { 255, 127 },  new byte[] { 127 }},
             };
+        }
 
         [Theory]
         [MemberData(nameof(InsertData))]
