@@ -40,14 +40,15 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesDoubleData))]
+        [MemberData(nameof(GetToBytesDoubleData()))]
         public void ToBytes_Double_Valid(byte[] expected, double input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for tests - ToBytes_Double_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesDoubleData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesDoubleData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0.0000000000000000E+000},
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 240, 63 }, 1.0000000000000000E+000},
@@ -55,6 +56,7 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 255, 255, 255, 255,  255, 239, 255 }, -1.7976931348623157E+308},
                         new object[]{ new byte[] { 1, 0, 0, 0, 0, 0, 0, 0 }, 4.9406564584124654E-324},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesShortData))]
