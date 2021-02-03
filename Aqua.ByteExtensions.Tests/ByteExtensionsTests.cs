@@ -426,21 +426,22 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InsertData))]
+        [MemberData(nameof(GetInsertData()))]
         public void Insert_Valid(byte[] expected, byte[] input, byte[] newBytes, int at) => Assert.Equal(expected, input.Insert(newBytes, at));
 
         /// <summary>
         /// Sample data for test - Insert_Valid
         /// </summary>
-        public static IEnumerable<object[]> InsertData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetInsertData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 255 }, null , new byte[] { 255 }, 0},
                         new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 },0},
                         new object[]{ new byte[] { 255, 127, 127, 91}, new byte[] { 255, 127, 91 },  new byte[] { 127 }, 2},
                         new object[]{ new byte[] { 255, 127, 91, 127}, new byte[] { 255, 127, 91 },  new byte[] { 127 }, 10},
             };
-
+        }
 
         [Theory]
         [MemberData(nameof(RemoveData))]
