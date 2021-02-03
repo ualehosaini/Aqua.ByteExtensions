@@ -514,19 +514,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(IsHexStringData))]
+        [MemberData(nameof(GetIsHexStringData()))]
         public void IsHexString_Valid(bool expected, string input) => Assert.Equal(expected, input.IsHexString());
 
         /// <summary>
         /// Sample data for test - IsHexString_Valid
         /// </summary>
-        public static IEnumerable<object[]> IsHexStringData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetIsHexStringData()
+        {
+            return new List<object[]>
             {
                         new object[]{ false, null},
                         new object[]{ true, "010204081020"},
                         new object[]{ false, "Z1-02-04-08-10-20" }
             };
+        }
 
         [Theory]
         [MemberData(nameof(IsHexStringCStyleData))]
