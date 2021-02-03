@@ -354,19 +354,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesBigEndianData))]
+        [MemberData(nameof(GetToBytesBigEndianData()))]
         public void ToBytesBigEndian_Valid(byte[] expected, int input) => Assert.Equal(expected, input.ToBytesBigEndian());
 
         /// <summary>
         /// Sample data for test - ToBytesBigEndian_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesBigEndianData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesBigEndianData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 128, 0, 0, 0 }, int.MinValue},
                         new object[]{ new byte[] { 127, 255, 255, 255 }, int.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesLittleEndianData))]
