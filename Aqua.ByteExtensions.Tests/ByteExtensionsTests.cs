@@ -214,14 +214,15 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesDoubleReversedData))]
+        [MemberData(nameof(GetToBytesDoubleReversedData()))]
         public void ToBytes_DoubleReversed_Valid(byte[] expected, double input) => Assert.Equal(expected, input.ToBytesReversed());
 
         /// <summary>
         /// Sample data for test - ToBytes_DoubleReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesDoubleReversedData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesDoubleReversedData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0.0000000000000000E+000},
                         new object[]{ new byte[] { 63, 240, 0, 0, 0, 0, 0, 0 }, 1.0000000000000000E+000},
@@ -229,6 +230,7 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 239, 255, 255, 255,  255, 255, 255 }, -1.7976931348623157E+308},
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 1 }, 4.9406564584124654E-324},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesShortReversedData))]
