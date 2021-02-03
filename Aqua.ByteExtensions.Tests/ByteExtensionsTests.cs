@@ -23,19 +23,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesCharData))]
+        [MemberData(nameof(GetToBytesCharData()))]
         public void ToBytes_Char_Valid(byte[] expected, char input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_Char_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesCharData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesCharData()
+        {
+            return new List<object[]>
             {
                         new object[]{new byte[] {0, 0}, null},
                         new object[]{new byte[] {65, 0}, 'A'},
                         new object[]{new byte[] {48, 0}, '0'},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesDoubleData))]
