@@ -146,19 +146,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesUintData))]
+        [MemberData(nameof(GetToBytesUintData()))]
         public void ToBytes_UInt_Valid(byte[] expected, uint input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_UInt_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesUintData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesUintData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 0 }, uint.MinValue},
                         new object[]{ new byte[] { 255, 255, 255, 255 }, uint.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesUlongData))]
