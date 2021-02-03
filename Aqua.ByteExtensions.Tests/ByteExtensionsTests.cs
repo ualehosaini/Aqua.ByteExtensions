@@ -444,14 +444,15 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(RemoveData))]
+        [MemberData(nameof(GetRemoveData()))]
         public void Remove_Valid(byte[] expected, byte[] input, int at, int n) => Assert.Equal(expected, input.Remove(at, n));
 
         /// <summary>
         /// Sample data for test - Remove_Valid
         /// </summary>
-        public static IEnumerable<object[]> RemoveData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetRemoveData()
+        {
+            return new List<object[]>
             {
                         new object[]{ null, null , 1, 0},
                         new object[]{ new byte[] { }, new byte[] { }, 1, 1},
@@ -459,6 +460,7 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 255, 127 }, new byte[] { 255, 127, 91 },  2, 1},
                         new object[]{ new byte[] { 255, 127, 91, 91, 127 }, new byte[] { 255, 127, 91, 255, 127, 91, 127 },  3, 2},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToHexStringData))]
