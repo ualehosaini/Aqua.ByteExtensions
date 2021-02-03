@@ -129,19 +129,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesUshortData))]
+        [MemberData(nameof(GetToBytesUshortData()))]
         public void ToBytes_UShort_Valid(byte[] expected, float input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_UShort_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesUshortData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesUshortData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 0 }, ushort.MinValue},
                         new object[]{ new byte[] { 0, 255, 127, 71 }, ushort.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesUintData))]
