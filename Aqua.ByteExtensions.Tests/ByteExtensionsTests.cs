@@ -112,19 +112,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesFloatData))]
+        [MemberData(nameof(GetToBytesFloatData()))]
         public void ToBytes_Float_Valid(byte[] expected, float input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_Float_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesFloatData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesFloatData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 255, 255, 127, 255 }, float.MinValue},
                         new object[]{ new byte[] { 255, 255, 127, 127 }, float.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesUshortData))]
