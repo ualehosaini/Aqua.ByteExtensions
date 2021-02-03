@@ -337,19 +337,21 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(ToBytesUlongReversedData))]
+        [MemberData(nameof(GetToBytesUlongReversedData()))]
         public void ToBytes_ULongReversed_Valid(byte[] expected, ulong input) => Assert.Equal(expected, input.ToBytesReversed());
 
         /// <summary>
         /// Sample data for test - ToBytes_ULongReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> ToBytesUlongReversedData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetToBytesUlongReversedData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, ulong.MinValue},
                         new object[]{ new byte[] { 255, 255, 255, 255, 255, 255, 255, 255 }, ulong.MaxValue},
             };
+        }
 
         [Theory]
         [MemberData(nameof(ToBytesBigEndianData))]
