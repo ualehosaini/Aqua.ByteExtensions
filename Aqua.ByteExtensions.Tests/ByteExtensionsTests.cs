@@ -388,14 +388,15 @@ namespace Aqua.ByteExtensions.Tests
         }
 
         [Theory]
-        [MemberData(nameof(GetBytesAtData))]
+        [MemberData(nameof(GetGetBytesAtData()))]
         public void GetBytesAt_Valid(byte[] expected, byte[] input, int at, int n) => Assert.Equal(expected, input.GetBytesAt(at, n));
 
         /// <summary>
         /// Sample data for test - GetBytesAt_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetBytesAtData =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetGetBytesAtData()
+        {
+            return new List<object[]>
             {
                         new object[]{ new byte[] { }, null , 3, 2},
                         new object[]{ new byte[] { }, new byte[] { 255 }, 3, -1},
@@ -405,6 +406,7 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 128 }, new byte[] { 0, 0, 0, 128 }, 3, 2},
                         new object[]{ new byte[] { 255, 127 }, new byte[] { 255, 255, 255, 127 },  2, 2},
             };
+        }
 
         [Theory]
         [MemberData(nameof(AppendData))]
