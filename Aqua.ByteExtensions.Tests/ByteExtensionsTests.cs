@@ -419,15 +419,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToHexStringBase64_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToHexStringBase64Data()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToHexStringBase64Data() => new List<object[]>
             {
                         new object[]{ "", null},
                         new object[]{ "", new byte[] { }},
                         new object[]{ "AQIECBAg", new byte[] { 1, 2, 4, 8, 16, 32 } }
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetIsHexStringData()))]
