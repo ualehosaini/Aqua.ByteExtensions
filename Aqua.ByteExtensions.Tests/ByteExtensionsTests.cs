@@ -26,15 +26,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_Char_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesCharData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesCharData() => new List<object[]>
             {
                         new object[]{new byte[] {0, 0}, null},
                         new object[]{new byte[] {65, 0}, 'A'},
                         new object[]{new byte[] {48, 0}, '0'},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesDoubleData()))]
