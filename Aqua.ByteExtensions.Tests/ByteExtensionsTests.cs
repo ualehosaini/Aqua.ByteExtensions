@@ -156,15 +156,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_BooleanReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesBooleanReversedData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesBooleanReversedData() => new List<object[]>
             {
                         new object[]{new byte[] {0}, null},
                         new object[]{new byte[] {1}, true},
                         new object[]{new byte[] {0}, false},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesCharReversedData()))]
