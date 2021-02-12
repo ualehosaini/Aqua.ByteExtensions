@@ -12,15 +12,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_Boolean_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesBooleanData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesBooleanData() => new List<object[]>
             {
                         new object[]{new byte[] {0}, null},
                         new object[]{new byte[] {1}, true},
                         new object[]{new byte[] {0}, false},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesCharData()))]
