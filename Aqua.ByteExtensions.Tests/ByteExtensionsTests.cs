@@ -170,15 +170,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_CharReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesCharReversedData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesCharReversedData() => new List<object[]>
             {
                         new object[]{new byte[] {0, 0}, null},
                         new object[]{new byte[] {0, 65}, 'A'},
                         new object[]{new byte[] {0, 48}, '0'},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesDoubleReversedData()))]
