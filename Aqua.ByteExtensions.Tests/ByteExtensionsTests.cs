@@ -433,15 +433,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - IsHexString_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetIsHexStringData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetIsHexStringData() => new List<object[]>
             {
                         new object[]{ false, null},
                         new object[]{ true, "010204081020"},
                         new object[]{ false, "Z1-02-04-08-10-20" }
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetIsHexStringCStyleData()))]
