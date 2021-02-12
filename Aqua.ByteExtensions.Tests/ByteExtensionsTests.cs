@@ -360,16 +360,13 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - Insert_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetInsertData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetInsertData() => new List<object[]>
             {
                         new object[]{ new byte[] { 255 }, null , new byte[] { 255 }, 0},
                         new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 },0},
                         new object[]{ new byte[] { 255, 127, 127, 91}, new byte[] { 255, 127, 91 },  new byte[] { 127 }, 2},
                         new object[]{ new byte[] { 255, 127, 91, 127}, new byte[] { 255, 127, 91 },  new byte[] { 127 }, 10},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetRemoveData()))]
