@@ -56,9 +56,7 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_Short_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesShortData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesShortData() => new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0}, 0},
                         new object[]{ new byte[] { 15, 0 }, 15},
@@ -66,7 +64,6 @@ namespace Aqua.ByteExtensions.Tests
                         new object[]{ new byte[] { 0, 128 }, short.MinValue},
                         new object[]{ new byte[] { 255, 127 }, short.MaxValue},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesIntData()))]
