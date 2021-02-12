@@ -391,15 +391,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToHexString_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToHexStringData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToHexStringData() => new List<object[]>
             {
                         new object[]{ "", null},
                         new object[]{ "", new byte[] { }},
                         new object[]{ "01-02-04-08-10-20", new byte[] { 1, 2, 4, 8, 16, 32 } }
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToHexStringDashFreeData()))]
