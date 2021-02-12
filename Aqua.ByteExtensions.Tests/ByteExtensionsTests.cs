@@ -447,15 +447,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - IsHexStringCStyle_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetIsHexStringCStyleData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetIsHexStringCStyleData() => new List<object[]>
             {
                         new object[]{ false, null},
                         new object[]{ true, "0x64"},
                         new object[]{ false, "0y64" }
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetBytes_Base64Data))]
