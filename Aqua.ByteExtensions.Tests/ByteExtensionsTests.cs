@@ -258,15 +258,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_UShortReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesUshortReversedData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesUshortReversedData() => new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 0 }, ushort.MinValue},
                         new object[]{ new byte[] { 71, 127, 255, 0 }, ushort.MaxValue},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesUintReversedData()))]
