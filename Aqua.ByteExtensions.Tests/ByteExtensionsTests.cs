@@ -230,15 +230,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_LongReversed_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesLongReversedData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesLongReversedData() => new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 128, 0, 0, 0, 0, 0, 0, 0 }, long.MinValue},
                         new object[]{ new byte[] { 127, 255, 255, 255, 255, 255, 255, 255 }, long.MaxValue},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesFloatReversedData()))]
