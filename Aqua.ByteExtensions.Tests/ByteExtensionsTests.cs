@@ -72,15 +72,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_Int_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesIntData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesIntData() => new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 128 }, int.MinValue},
                         new object[]{ new byte[] { 255, 255, 255, 127 }, int.MaxValue},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesLongData()))]
