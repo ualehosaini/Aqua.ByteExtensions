@@ -346,15 +346,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - Append_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetAppendData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetAppendData() => new List<object[]>
             {
                         new object[]{ new byte[] { 255 }, null , new byte[] { 255 }},
                         new object[]{ new byte[] { 255 }, new byte[] { }, new byte[] { 255 }},
                         new object[]{ new byte[] { 255, 127, 127 }, new byte[] { 255, 127 },  new byte[] { 127 }},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetInsertData()))]
