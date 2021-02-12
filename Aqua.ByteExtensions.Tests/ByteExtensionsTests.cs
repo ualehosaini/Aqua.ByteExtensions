@@ -461,8 +461,7 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - GetBytes_Base64_Valid
         /// </summary> 
-        public static IEnumerable<object[]> GetBytes_Base64Data =>
-            new List<object[]>
+        public static IEnumerable<object[]> GetBytes_Base64Data => new List<object[]>
             {
                         new object[]{ new byte[] { }, null},
                         new object[]{ new byte[] { 1, 2, 4, 8, 16, 32 }, "AQIECBAg"},
