@@ -114,15 +114,12 @@ namespace Aqua.ByteExtensions.Tests
         /// <summary>
         /// Sample data for test - ToBytes_UShort_Valid
         /// </summary>
-        public static IEnumerable<object[]> GetToBytesUshortData()
-        {
-            return new List<object[]>
+        public static IEnumerable<object[]> GetToBytesUshortData() => new List<object[]>
             {
                         new object[]{ new byte[] { 0, 0, 0, 0 }, 0},
                         new object[]{ new byte[] { 0, 0, 0, 0 }, ushort.MinValue},
                         new object[]{ new byte[] { 0, 255, 127, 71 }, ushort.MaxValue},
             };
-        }
 
         [Theory]
         [MemberData(nameof(GetToBytesUintData()))]
