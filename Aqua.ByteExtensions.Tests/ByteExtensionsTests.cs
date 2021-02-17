@@ -377,7 +377,10 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetAppendData()))]
-        public void Append_Valid(byte[] expected, byte[] input, byte[] newBytes) => Assert.Equal(expected, input.Append(newBytes));
+        public void Append_Valid(
+            byte[] expected,
+            byte[] input,
+            byte[] newBytes) => Assert.Equal(expected, input.Append(newBytes));
 
         /// <summary>
         /// Sample data for test - Append_Valid
