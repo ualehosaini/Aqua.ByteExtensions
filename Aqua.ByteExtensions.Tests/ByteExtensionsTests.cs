@@ -37,7 +37,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesDoubleData()))]
-        public void ToBytes_Double_Valid(byte[] expected, double input) => Assert.Equal(expected, input.ToBytes());
+        public void ToBytes_Double_Valid(
+            byte[] expected,
+            double input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for tests - ToBytes_Double_Valid
