@@ -72,7 +72,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesIntData()))]
-        public void ToBytes_Int_Valid(byte[] expected, int input) => Assert.Equal(expected, input.ToBytes());
+        public void ToBytes_Int_Valid(
+            byte[] expected,
+            int input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_Int_Valid
