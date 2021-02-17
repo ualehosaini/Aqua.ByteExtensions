@@ -293,7 +293,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesUintReversedData()))]
-        public void ToBytes_UIntReversed_Valid(byte[] expected, uint input) => Assert.Equal(expected, input.ToBytesReversed());
+        public void ToBytes_UIntReversed_Valid(
+            byte[] expected,
+            uint input) => Assert.Equal(expected, input.ToBytesReversed());
 
         /// <summary>
         /// Sample data for test - ToBytes_UIntReversed_Valid
