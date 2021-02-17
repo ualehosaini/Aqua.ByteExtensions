@@ -340,7 +340,8 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesLittleEndianData()))]
-        public void ToBytesLittleEndian_Valid(byte[] expected, int input) => Assert.Equal(expected, input.ToBytesLittleEndian());
+        public void ToBytesLittleEndian_Valid(byte[] expected,
+                                              int input) => Assert.Equal(expected, input.ToBytesLittleEndian());
 
         /// <summary>
         /// Sample data for test - ToBytesLittleEndian_Valid
