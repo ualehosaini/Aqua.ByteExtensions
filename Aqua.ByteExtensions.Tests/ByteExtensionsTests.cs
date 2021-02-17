@@ -150,7 +150,8 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesUlongData()))]
-        public void ToBytes_ULong_Valid(byte[] expected, ulong input) => Assert.Equal(expected, input.ToBytes());
+        public void ToBytes_ULong_Valid(byte[] expected,
+                                        ulong input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_ULong_Valid
