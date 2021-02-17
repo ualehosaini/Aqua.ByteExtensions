@@ -119,7 +119,8 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToBytesUshortData()))]
-        public void ToBytes_UShort_Valid(byte[] expected, float input) => Assert.Equal(expected, input.ToBytes());
+        public void ToBytes_UShort_Valid(byte[] expected,
+                                         float input) => Assert.Equal(expected, input.ToBytes());
 
         /// <summary>
         /// Sample data for test - ToBytes_UShort_Valid
