@@ -447,7 +447,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToHexStringDashFreeData()))]
-        public void ToHexStringDashFree_Valid(string expected, byte[] input) => Assert.Equal(expected, input.ToHexStringDashFree());
+        public void ToHexStringDashFree_Valid(
+            string expected,
+            byte[] input) => Assert.Equal(expected, input.ToHexStringDashFree());
 
         /// <summary>
         /// Sample data for test - ToHexStringDashFree_Valid
