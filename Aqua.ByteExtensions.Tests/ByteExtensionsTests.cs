@@ -509,7 +509,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetBytes_Base64Data))]
-        public void GetBytes_Base64_Valid(byte[] expected, string input) => Assert.Equal(expected, input.GetBytes());
+        public void GetBytes_Base64_Valid(
+            byte[] expected,
+            string input) => Assert.Equal(expected, input.GetBytes());
 
         /// <summary>
         /// Sample data for test - GetBytes_Base64_Valid
