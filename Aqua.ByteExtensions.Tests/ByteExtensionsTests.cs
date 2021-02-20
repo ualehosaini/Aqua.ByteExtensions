@@ -494,7 +494,8 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetIsHexStringCStyleData()))]
-        public void IsHexStringCStyle_Valid(bool expected, string input) => Assert.Equal(expected, input.IsHexStringCStyle());
+        public void IsHexStringCStyle_Valid(bool expected,
+                                            string input) => Assert.Equal(expected, input.IsHexStringCStyle());
 
         /// <summary>
         /// Sample data for test - IsHexStringCStyle_Valid
