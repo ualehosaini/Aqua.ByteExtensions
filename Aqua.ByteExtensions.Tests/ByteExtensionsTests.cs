@@ -478,7 +478,9 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetIsHexStringData()))]
-        public void IsHexString_Valid(bool expected, string input) => Assert.Equal(expected, input.IsHexString());
+        public void IsHexString_Valid(
+            bool expected,
+            string input) => Assert.Equal(expected, input.IsHexString());
 
         /// <summary>
         /// Sample data for test - IsHexString_Valid
