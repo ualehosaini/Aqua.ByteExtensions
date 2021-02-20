@@ -432,7 +432,8 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetToHexStringData()))]
-        public void ToHexString_Valid(string expected, byte[] input) => Assert.Equal(expected, input.ToHexString());
+        public void ToHexString_Valid(string expected,
+                                      byte[] input) => Assert.Equal(expected, input.ToHexString());
 
         /// <summary>
         /// Sample data for test - ToHexString_Valid
