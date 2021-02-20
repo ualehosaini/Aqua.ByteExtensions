@@ -412,7 +412,11 @@ namespace Aqua.ByteExtensions.Tests
 
         [Theory]
         [MemberData(nameof(GetRemoveData()))]
-        public void Remove_Valid(byte[] expected, byte[] input, int at, int n) => Assert.Equal(expected, input.Remove(at, n));
+        public void Remove_Valid(
+            byte[] expected,
+            byte[] input,
+            int at,
+            int n) => Assert.Equal(expected, input.Remove(at, n));
 
         /// <summary>
         /// Sample data for test - Remove_Valid
